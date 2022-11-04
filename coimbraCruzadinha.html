@@ -326,32 +326,31 @@ function destroyGrid() {
 function gameSequence() {
     span_questionText.innerHTML = `<b>${cont_correctAnswer + 1}.</b> ${questions_list[cont_correctAnswer]}`;
 
-    if (cont_correctAnswer == 1) {
-        word.word1.write();
-    }
-    else if (cont_correctAnswer == 2) {
-        word.word2.write();
-    }
-    else if (cont_correctAnswer == 3) {
-        word.word3.write();
-    }
-    else if (cont_correctAnswer == 4) {
-        word.word4.write();
-    }
-    else if (cont_correctAnswer == 5) {
-        word.word5.write();
-    }
-    else if (cont_correctAnswer == 6) {
-        word.word6.write();
-    
+    switch(cont_correctAnswer){
 
+        case 1:
+        word.word1.write();
+        break
+        case 2:
+        word.word2.write();
+        break
+        case 3:
+        word.word3.write();
+        break
+        case 4:
+        word.word4.write();
+        break
+        case 5:
+        word.word5.write();
+        break
+        case 6:
+        word.word6.write();
 
         setTimeout(function () {
             destroyGrid();
         }, 1000);
-    
+        break
     }
-
 }
 
 
